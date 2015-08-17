@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MemberViewViewController.h
 //  WorkoutBuddy
 //
 //  Created by Oscar G.M on 8/16/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MemberViewViewController : UIViewController
 
 @end
-

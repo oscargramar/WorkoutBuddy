@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		55907DAF1B817B9500DA4DA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55907DAE1B817B9500DA4DA4 /* main.m */; };
 		55907DB21B817B9500DA4DA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55907DB11B817B9500DA4DA4 /* AppDelegate.m */; };
-		55907DB51B817B9500DA4DA4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55907DB41B817B9500DA4DA4 /* ViewController.m */; };
-		55907DB81B817B9500DA4DA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55907DB61B817B9500DA4DA4 /* Main.storyboard */; };
 		55907DBA1B817B9500DA4DA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55907DB91B817B9500DA4DA4 /* Images.xcassets */; };
 		55907DBD1B817B9500DA4DA4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55907DBB1B817B9500DA4DA4 /* LaunchScreen.xib */; };
 		55907DC91B817B9500DA4DA4 /* WorkoutBuddyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55907DC81B817B9500DA4DA4 /* WorkoutBuddyTests.m */; };
+		55907DD51B81861E00DA4DA4 /* MemberViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55907DD31B81861E00DA4DA4 /* MemberViewViewController.m */; };
+		55907DD61B81861E00DA4DA4 /* MemberViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55907DD41B81861E00DA4DA4 /* MemberViewViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +32,14 @@
 		55907DAE1B817B9500DA4DA4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		55907DB01B817B9500DA4DA4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		55907DB11B817B9500DA4DA4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		55907DB31B817B9500DA4DA4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		55907DB41B817B9500DA4DA4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		55907DB71B817B9500DA4DA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55907DB91B817B9500DA4DA4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		55907DBC1B817B9500DA4DA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		55907DC21B817B9500DA4DA4 /* WorkoutBuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutBuddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55907DC71B817B9500DA4DA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55907DC81B817B9500DA4DA4 /* WorkoutBuddyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkoutBuddyTests.m; sourceTree = "<group>"; };
+		55907DD21B81861E00DA4DA4 /* MemberViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberViewViewController.h; sourceTree = "<group>"; };
+		55907DD31B81861E00DA4DA4 /* MemberViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberViewViewController.m; sourceTree = "<group>"; };
+		55907DD41B81861E00DA4DA4 /* MemberViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemberViewViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +83,12 @@
 			children = (
 				55907DB01B817B9500DA4DA4 /* AppDelegate.h */,
 				55907DB11B817B9500DA4DA4 /* AppDelegate.m */,
-				55907DB31B817B9500DA4DA4 /* ViewController.h */,
-				55907DB41B817B9500DA4DA4 /* ViewController.m */,
-				55907DB61B817B9500DA4DA4 /* Main.storyboard */,
 				55907DB91B817B9500DA4DA4 /* Images.xcassets */,
 				55907DBB1B817B9500DA4DA4 /* LaunchScreen.xib */,
 				55907DAC1B817B9500DA4DA4 /* Supporting Files */,
+				55907DD21B81861E00DA4DA4 /* MemberViewViewController.h */,
+				55907DD31B81861E00DA4DA4 /* MemberViewViewController.m */,
+				55907DD41B81861E00DA4DA4 /* MemberViewViewController.xib */,
 			);
 			path = WorkoutBuddy;
 			sourceTree = "<group>";
@@ -199,7 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55907DB81B817B9500DA4DA4 /* Main.storyboard in Resources */,
+				55907DD61B81861E00DA4DA4 /* MemberViewViewController.xib in Resources */,
 				55907DBD1B817B9500DA4DA4 /* LaunchScreen.xib in Resources */,
 				55907DBA1B817B9500DA4DA4 /* Images.xcassets in Resources */,
 			);
@@ -219,8 +219,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55907DB51B817B9500DA4DA4 /* ViewController.m in Sources */,
 				55907DB21B817B9500DA4DA4 /* AppDelegate.m in Sources */,
+				55907DD51B81861E00DA4DA4 /* MemberViewViewController.m in Sources */,
 				55907DAF1B817B9500DA4DA4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,14 +244,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		55907DB61B817B9500DA4DA4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				55907DB71B817B9500DA4DA4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		55907DBB1B817B9500DA4DA4 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
