@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BBA293D7-F226-4C7E-96B4-E529C4D52E7F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D368B332C4A0DE89366FFF00124C9FBC965075C6</key>
+		<string>https://github.com/oscargramar/WorkoutBuddy.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WorkoutBuddy/WorkoutBuddy.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D368B332C4A0DE89366FFF00124C9FBC965075C6</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/oscargramar/WorkoutBuddy.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D368B332C4A0DE89366FFF00124C9FBC965075C6</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D368B332C4A0DE89366FFF00124C9FBC965075C6</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WorkoutBuddy</string>
+		</dict>
+	</array>
+</dict>
+</plist>
