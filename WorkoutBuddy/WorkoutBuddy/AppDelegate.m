@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MemberViewViewController.h"
 
 @interface AppDelegate ()
 

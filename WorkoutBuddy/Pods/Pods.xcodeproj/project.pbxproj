@@ -1,0 +1,497 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E8ECC3E0968F5DFFD9D2A06 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D4F1BA44239335C5CEC9AFD /* QuartzCore.framework */; };
+		32DCD20682D7A04678EFE199 /* MMDrawerBarButtonItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C36E7332210BCDDE93F83B4E /* MMDrawerBarButtonItem.h */; };
+		4B329649F5D44EA5BC4B270D /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 239336858B16424A505527DA /* MMDrawerBarButtonItem.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		57C2D53A112FDC140FF4E0F3 /* UIViewController+MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9131C878DDD4072E8606C5E9 /* UIViewController+MMDrawerController.h */; };
+		5AE352A317023A5E939A008E /* MMDrawerVisualState.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A4BE705FC73CDC40FFCF7FF /* MMDrawerVisualState.h */; };
+		798AE90CA4A1D651898A0DBD /* Pods-WorkoutBuddy-MMDrawerController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 563A7A00FC55CA108E9E5722 /* Pods-WorkoutBuddy-MMDrawerController-dummy.m */; };
+		84ABC2CF56D5014C0183FBCB /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06EC69A384314DEEE0C13B59 /* UIViewController+MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		89C6A44DC13A105EC13A331F /* MMDrawerController.h in Headers */ = {isa = PBXBuildFile; fileRef = F4955E0E2F59C13E59DD7B90 /* MMDrawerController.h */; };
+		B28B9134618BA6D0BF6FB1FF /* Pods-WorkoutBuddy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C002C3F70D4FAE6001B048 /* Pods-WorkoutBuddy-dummy.m */; };
+		B676647B44D19E5CE07B7736 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6B6BFCC1A426C9A6C0AC4C /* Foundation.framework */; };
+		BA84A33AFBC214E3C2EAC2D4 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = CB34E2D43FDD9ED9900F6AC6 /* MMDrawerVisualState.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C53D5A11F2C55E8E424DBFDB /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF00EC3132FE508D9D6CB33D /* MMDrawerController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D94191C870083513495C259E /* MMDrawerController+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = CCAAC387C2DE907B775CB714 /* MMDrawerController+Subclass.h */; };
+		DD885407390013A217F6B41F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A6B6BFCC1A426C9A6C0AC4C /* Foundation.framework */; };
+		E6063D7ECF5584CC75AFD525 /* MMDrawerController+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = CCAAC387C2DE907B775CB714 /* MMDrawerController+Subclass.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5D6430D4659957528CE943AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BE3A753ADA72F2EF9F88793 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A885F3F2BFD5DEA23DAAE36B;
+			remoteInfo = "Pods-WorkoutBuddy-MMDrawerController";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06EC69A384314DEEE0C13B59 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+MMDrawerController.m"; path = "MMDrawerController/UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
+		0A6B6BFCC1A426C9A6C0AC4C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		112D921AB6AC2C2E8EEDEB83 /* libPods-WorkoutBuddy-MMDrawerController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WorkoutBuddy-MMDrawerController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		217D897F091BAD1B77C31B5F /* Pods-WorkoutBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WorkoutBuddy.debug.xcconfig"; sourceTree = "<group>"; };
+		21AEDCA5193C980D9F7AB931 /* Pods-WorkoutBuddy-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WorkoutBuddy-acknowledgements.plist"; sourceTree = "<group>"; };
+		22C002C3F70D4FAE6001B048 /* Pods-WorkoutBuddy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WorkoutBuddy-dummy.m"; sourceTree = "<group>"; };
+		239336858B16424A505527DA /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerBarButtonItem.m; path = MMDrawerController/MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		4CC70370D19E62DCE416560E /* Pods-WorkoutBuddy-MMDrawerController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WorkoutBuddy-MMDrawerController.xcconfig"; sourceTree = "<group>"; };
+		563A7A00FC55CA108E9E5722 /* Pods-WorkoutBuddy-MMDrawerController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WorkoutBuddy-MMDrawerController-dummy.m"; sourceTree = "<group>"; };
+		6617CC99348B4BE97F5DC63F /* Pods-WorkoutBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WorkoutBuddy.release.xcconfig"; sourceTree = "<group>"; };
+		6A4BE705FC73CDC40FFCF7FF /* MMDrawerVisualState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerVisualState.h; path = MMDrawerController/MMDrawerVisualState.h; sourceTree = "<group>"; };
+		7DAC234C40672D2A293F3DB5 /* Pods-WorkoutBuddy-MMDrawerController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WorkoutBuddy-MMDrawerController-Private.xcconfig"; sourceTree = "<group>"; };
+		8EA7A4E4E7224B271505D4B7 /* Pods-WorkoutBuddy-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WorkoutBuddy-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9131C878DDD4072E8606C5E9 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+MMDrawerController.h"; path = "MMDrawerController/UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		9D4F1BA44239335C5CEC9AFD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		BC042FC4EE064C9E0CF36F3C /* Pods-WorkoutBuddy-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WorkoutBuddy-resources.sh"; sourceTree = "<group>"; };
+		C36E7332210BCDDE93F83B4E /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerBarButtonItem.h; path = MMDrawerController/MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		CB34E2D43FDD9ED9900F6AC6 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerVisualState.m; path = MMDrawerController/MMDrawerVisualState.m; sourceTree = "<group>"; };
+		CCAAC387C2DE907B775CB714 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MMDrawerController+Subclass.h"; path = "MMDrawerController/MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		E30314E59AEE6A3597EF25E9 /* Pods-WorkoutBuddy-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WorkoutBuddy-environment.h"; sourceTree = "<group>"; };
+		E4C26198687281EA475EAB0D /* Pods-WorkoutBuddy-MMDrawerController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WorkoutBuddy-MMDrawerController-prefix.pch"; sourceTree = "<group>"; };
+		E533376C687509C2004D1486 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E54A0239D7BB13C23D844B00 /* libPods-WorkoutBuddy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WorkoutBuddy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF00EC3132FE508D9D6CB33D /* MMDrawerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MMDrawerController.m; path = MMDrawerController/MMDrawerController.m; sourceTree = "<group>"; };
+		F4955E0E2F59C13E59DD7B90 /* MMDrawerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MMDrawerController.h; path = MMDrawerController/MMDrawerController.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D34DEC742EF2D15D19E03E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B676647B44D19E5CE07B7736 /* Foundation.framework in Frameworks */,
+				0E8ECC3E0968F5DFFD9D2A06 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D49938070202ED472ACDBDD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD885407390013A217F6B41F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		161C4769EA259E05EBCA66ED /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4CC70370D19E62DCE416560E /* Pods-WorkoutBuddy-MMDrawerController.xcconfig */,
+				7DAC234C40672D2A293F3DB5 /* Pods-WorkoutBuddy-MMDrawerController-Private.xcconfig */,
+				563A7A00FC55CA108E9E5722 /* Pods-WorkoutBuddy-MMDrawerController-dummy.m */,
+				E4C26198687281EA475EAB0D /* Pods-WorkoutBuddy-MMDrawerController-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-WorkoutBuddy-MMDrawerController";
+			sourceTree = "<group>";
+		};
+		189EDEE340C371B17815640E /* MMDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				FE9087355B453CD99F1521D9 /* Core */,
+				7EEEDE4F8A600ECA8EE22D34 /* MMDrawerBarButtonItem */,
+				BC588DAE2E6193A3BCDFFB58 /* MMDrawerVisualStates */,
+				AFA7FDCFC0D831D932BD7B95 /* Subclass */,
+				161C4769EA259E05EBCA66ED /* Support Files */,
+			);
+			path = MMDrawerController;
+			sourceTree = "<group>";
+		};
+		2BAF27DEECE3B6A6ECD14235 /* Pods-WorkoutBuddy */ = {
+			isa = PBXGroup;
+			children = (
+				8EA7A4E4E7224B271505D4B7 /* Pods-WorkoutBuddy-acknowledgements.markdown */,
+				21AEDCA5193C980D9F7AB931 /* Pods-WorkoutBuddy-acknowledgements.plist */,
+				22C002C3F70D4FAE6001B048 /* Pods-WorkoutBuddy-dummy.m */,
+				E30314E59AEE6A3597EF25E9 /* Pods-WorkoutBuddy-environment.h */,
+				BC042FC4EE064C9E0CF36F3C /* Pods-WorkoutBuddy-resources.sh */,
+				217D897F091BAD1B77C31B5F /* Pods-WorkoutBuddy.debug.xcconfig */,
+				6617CC99348B4BE97F5DC63F /* Pods-WorkoutBuddy.release.xcconfig */,
+			);
+			name = "Pods-WorkoutBuddy";
+			path = "Target Support Files/Pods-WorkoutBuddy";
+			sourceTree = "<group>";
+		};
+		637D7A55491E28BB548247D2 = {
+			isa = PBXGroup;
+			children = (
+				E533376C687509C2004D1486 /* Podfile */,
+				C80E2538BBD24780EA2B52A6 /* Frameworks */,
+				A77EAD696B4E8A5CD5FF1483 /* Pods */,
+				C2558183D8FDAC0DC1E44374 /* Products */,
+				E8198D88CD82182BB86543A8 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7EEEDE4F8A600ECA8EE22D34 /* MMDrawerBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				C36E7332210BCDDE93F83B4E /* MMDrawerBarButtonItem.h */,
+				239336858B16424A505527DA /* MMDrawerBarButtonItem.m */,
+			);
+			name = MMDrawerBarButtonItem;
+			sourceTree = "<group>";
+		};
+		9E5F07B346CCF78DDCFE8FB3 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0A6B6BFCC1A426C9A6C0AC4C /* Foundation.framework */,
+				9D4F1BA44239335C5CEC9AFD /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		A77EAD696B4E8A5CD5FF1483 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				189EDEE340C371B17815640E /* MMDrawerController */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AFA7FDCFC0D831D932BD7B95 /* Subclass */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Subclass;
+			sourceTree = "<group>";
+		};
+		BC588DAE2E6193A3BCDFFB58 /* MMDrawerVisualStates */ = {
+			isa = PBXGroup;
+			children = (
+				6A4BE705FC73CDC40FFCF7FF /* MMDrawerVisualState.h */,
+				CB34E2D43FDD9ED9900F6AC6 /* MMDrawerVisualState.m */,
+			);
+			name = MMDrawerVisualStates;
+			sourceTree = "<group>";
+		};
+		C2558183D8FDAC0DC1E44374 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E54A0239D7BB13C23D844B00 /* libPods-WorkoutBuddy.a */,
+				112D921AB6AC2C2E8EEDEB83 /* libPods-WorkoutBuddy-MMDrawerController.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C80E2538BBD24780EA2B52A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E5F07B346CCF78DDCFE8FB3 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8198D88CD82182BB86543A8 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2BAF27DEECE3B6A6ECD14235 /* Pods-WorkoutBuddy */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		FE9087355B453CD99F1521D9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F4955E0E2F59C13E59DD7B90 /* MMDrawerController.h */,
+				EF00EC3132FE508D9D6CB33D /* MMDrawerController.m */,
+				CCAAC387C2DE907B775CB714 /* MMDrawerController+Subclass.h */,
+				9131C878DDD4072E8606C5E9 /* UIViewController+MMDrawerController.h */,
+				06EC69A384314DEEE0C13B59 /* UIViewController+MMDrawerController.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		91504D5C80ED763B5BAD1625 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32DCD20682D7A04678EFE199 /* MMDrawerBarButtonItem.h in Headers */,
+				D94191C870083513495C259E /* MMDrawerController+Subclass.h in Headers */,
+				E6063D7ECF5584CC75AFD525 /* MMDrawerController+Subclass.h in Headers */,
+				89C6A44DC13A105EC13A331F /* MMDrawerController.h in Headers */,
+				5AE352A317023A5E939A008E /* MMDrawerVisualState.h in Headers */,
+				57C2D53A112FDC140FF4E0F3 /* UIViewController+MMDrawerController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4A6B18B6627BEC46C9C6C681 /* Pods-WorkoutBuddy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F8C0BC7232576466A754D89 /* Build configuration list for PBXNativeTarget "Pods-WorkoutBuddy" */;
+			buildPhases = (
+				B39C3D460AC6383F4D12A622 /* Sources */,
+				D49938070202ED472ACDBDD5 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4B1954A489FCDA3A2935A16 /* PBXTargetDependency */,
+			);
+			name = "Pods-WorkoutBuddy";
+			productName = "Pods-WorkoutBuddy";
+			productReference = E54A0239D7BB13C23D844B00 /* libPods-WorkoutBuddy.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A885F3F2BFD5DEA23DAAE36B /* Pods-WorkoutBuddy-MMDrawerController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6BEA561896182B9F944D978 /* Build configuration list for PBXNativeTarget "Pods-WorkoutBuddy-MMDrawerController" */;
+			buildPhases = (
+				A82D9E33D7332447AF7C3663 /* Sources */,
+				2D34DEC742EF2D15D19E03E4 /* Frameworks */,
+				91504D5C80ED763B5BAD1625 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-WorkoutBuddy-MMDrawerController";
+			productName = "Pods-WorkoutBuddy-MMDrawerController";
+			productReference = 112D921AB6AC2C2E8EEDEB83 /* libPods-WorkoutBuddy-MMDrawerController.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BE3A753ADA72F2EF9F88793 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = FC2B729F3EFC6C31D9CD4606 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 637D7A55491E28BB548247D2;
+			productRefGroup = C2558183D8FDAC0DC1E44374 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4A6B18B6627BEC46C9C6C681 /* Pods-WorkoutBuddy */,
+				A885F3F2BFD5DEA23DAAE36B /* Pods-WorkoutBuddy-MMDrawerController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A82D9E33D7332447AF7C3663 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B329649F5D44EA5BC4B270D /* MMDrawerBarButtonItem.m in Sources */,
+				C53D5A11F2C55E8E424DBFDB /* MMDrawerController.m in Sources */,
+				BA84A33AFBC214E3C2EAC2D4 /* MMDrawerVisualState.m in Sources */,
+				798AE90CA4A1D651898A0DBD /* Pods-WorkoutBuddy-MMDrawerController-dummy.m in Sources */,
+				84ABC2CF56D5014C0183FBCB /* UIViewController+MMDrawerController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B39C3D460AC6383F4D12A622 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B28B9134618BA6D0BF6FB1FF /* Pods-WorkoutBuddy-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A4B1954A489FCDA3A2935A16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-WorkoutBuddy-MMDrawerController";
+			target = A885F3F2BFD5DEA23DAAE36B /* Pods-WorkoutBuddy-MMDrawerController */;
+			targetProxy = 5D6430D4659957528CE943AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0926A11614471DEB095368EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0C2966864807523AB8CF576F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DAC234C40672D2A293F3DB5 /* Pods-WorkoutBuddy-MMDrawerController-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-WorkoutBuddy-MMDrawerController/Pods-WorkoutBuddy-MMDrawerController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		75A60555CD7A7E9274DB100E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		928FF8D73360F47BB9D53C51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 217D897F091BAD1B77C31B5F /* Pods-WorkoutBuddy.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9A83B99648949176E98A6B9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6617CC99348B4BE97F5DC63F /* Pods-WorkoutBuddy.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F25198540EAF3F27C7ED79BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DAC234C40672D2A293F3DB5 /* Pods-WorkoutBuddy-MMDrawerController-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-WorkoutBuddy-MMDrawerController/Pods-WorkoutBuddy-MMDrawerController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F8C0BC7232576466A754D89 /* Build configuration list for PBXNativeTarget "Pods-WorkoutBuddy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				928FF8D73360F47BB9D53C51 /* Debug */,
+				9A83B99648949176E98A6B9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6BEA561896182B9F944D978 /* Build configuration list for PBXNativeTarget "Pods-WorkoutBuddy-MMDrawerController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F25198540EAF3F27C7ED79BA /* Debug */,
+				0C2966864807523AB8CF576F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC2B729F3EFC6C31D9CD4606 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75A60555CD7A7E9274DB100E /* Debug */,
+				0926A11614471DEB095368EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BE3A753ADA72F2EF9F88793 /* Project object */;
+}
