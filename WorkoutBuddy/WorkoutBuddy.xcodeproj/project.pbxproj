@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5562B05E1B819D0900E3883A /* MemberViewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5562B05C1B819D0900E3883A /* MemberViewTableViewController.m */; };
+		5562B05F1B819D0900E3883A /* MemberViewTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5562B05D1B819D0900E3883A /* MemberViewTableViewController.xib */; };
 		55907DAF1B817B9500DA4DA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55907DAE1B817B9500DA4DA4 /* main.m */; };
 		55907DB21B817B9500DA4DA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55907DB11B817B9500DA4DA4 /* AppDelegate.m */; };
 		55907DBA1B817B9500DA4DA4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55907DB91B817B9500DA4DA4 /* Images.xcassets */; };
@@ -30,6 +32,9 @@
 /* Begin PBXFileReference section */
 		0056007A60AC3C65E1C4F9A4 /* Pods-WorkoutBuddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkoutBuddy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WorkoutBuddy/Pods-WorkoutBuddy.debug.xcconfig"; sourceTree = "<group>"; };
 		48682EBDF788030558A8332D /* Pods-WorkoutBuddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkoutBuddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-WorkoutBuddy/Pods-WorkoutBuddy.release.xcconfig"; sourceTree = "<group>"; };
+		5562B05B1B819D0900E3883A /* MemberViewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberViewTableViewController.h; sourceTree = "<group>"; };
+		5562B05C1B819D0900E3883A /* MemberViewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberViewTableViewController.m; sourceTree = "<group>"; };
+		5562B05D1B819D0900E3883A /* MemberViewTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemberViewTableViewController.xib; sourceTree = "<group>"; };
 		55907DA91B817B9500DA4DA4 /* WorkoutBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55907DAD1B817B9500DA4DA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55907DAE1B817B9500DA4DA4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -82,6 +87,43 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5562B0591B819C3200E3883A /* MemberView */ = {
+			isa = PBXGroup;
+			children = (
+				55907DD21B81861E00DA4DA4 /* MemberViewViewController.h */,
+				55907DD31B81861E00DA4DA4 /* MemberViewViewController.m */,
+				55907DD41B81861E00DA4DA4 /* MemberViewViewController.xib */,
+				5562B0601B819D1000E3883A /* MemberViewTableView */,
+			);
+			name = MemberView;
+			sourceTree = "<group>";
+		};
+		5562B05A1B819C4B00E3883A /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				55907DB01B817B9500DA4DA4 /* AppDelegate.h */,
+				55907DB11B817B9500DA4DA4 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		5562B0601B819D1000E3883A /* MemberViewTableView */ = {
+			isa = PBXGroup;
+			children = (
+				5562B05B1B819D0900E3883A /* MemberViewTableViewController.h */,
+				5562B05C1B819D0900E3883A /* MemberViewTableViewController.m */,
+				5562B05D1B819D0900E3883A /* MemberViewTableViewController.xib */,
+			);
+			name = MemberViewTableView;
+			sourceTree = "<group>";
+		};
+		5562B0631B85127F00E3883A /* DetailsView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DetailsView;
+			sourceTree = "<group>";
+		};
 		55907DA01B817B9500DA4DA4 = {
 			isa = PBXGroup;
 			children = (
@@ -105,13 +147,11 @@
 		55907DAB1B817B9500DA4DA4 /* WorkoutBuddy */ = {
 			isa = PBXGroup;
 			children = (
-				55907DB01B817B9500DA4DA4 /* AppDelegate.h */,
-				55907DB11B817B9500DA4DA4 /* AppDelegate.m */,
+				5562B05A1B819C4B00E3883A /* AppDelegate */,
+				5562B0631B85127F00E3883A /* DetailsView */,
+				5562B0591B819C3200E3883A /* MemberView */,
 				55907DB91B817B9500DA4DA4 /* Images.xcassets */,
 				55907DBB1B817B9500DA4DA4 /* LaunchScreen.xib */,
-				55907DD21B81861E00DA4DA4 /* MemberViewViewController.h */,
-				55907DD31B81861E00DA4DA4 /* MemberViewViewController.m */,
-				55907DD41B81861E00DA4DA4 /* MemberViewViewController.xib */,
 				55907DAC1B817B9500DA4DA4 /* Supporting Files */,
 			);
 			path = WorkoutBuddy;
@@ -155,6 +195,7 @@
 				55907DA61B817B9500DA4DA4 /* Frameworks */,
 				55907DA71B817B9500DA4DA4 /* Resources */,
 				618B3ABCD2E3C0D65E93D504 /* Copy Pods Resources */,
+				B62265CC1AEC8D5D5291921B /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,7 +230,7 @@
 		55907DA11B817B9500DA4DA4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = GMStudios;
 				TargetAttributes = {
 					55907DA81B817B9500DA4DA4 = {
@@ -225,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5562B05F1B819D0900E3883A /* MemberViewTableViewController.xib in Resources */,
 				55907DD61B81861E00DA4DA4 /* MemberViewViewController.xib in Resources */,
 				55907DBD1B817B9500DA4DA4 /* LaunchScreen.xib in Resources */,
 				55907DBA1B817B9500DA4DA4 /* Images.xcassets in Resources */,
@@ -256,6 +298,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WorkoutBuddy/Pods-WorkoutBuddy-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B62265CC1AEC8D5D5291921B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WorkoutBuddy/Pods-WorkoutBuddy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D018BFC6E50170E708115268 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5562B05E1B819D0900E3883A /* MemberViewTableViewController.m in Sources */,
 				55907DB21B817B9500DA4DA4 /* AppDelegate.m in Sources */,
 				55907DD51B81861E00DA4DA4 /* MemberViewViewController.m in Sources */,
 				55907DAF1B817B9500DA4DA4 /* main.m in Sources */,
@@ -335,6 +393,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -401,6 +460,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WorkoutBuddy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "OGM.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -412,6 +472,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WorkoutBuddy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "OGM.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -430,6 +491,7 @@
 				);
 				INFOPLIST_FILE = WorkoutBuddyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "OGM.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorkoutBuddy.app/WorkoutBuddy";
 			};
@@ -445,6 +507,7 @@
 				);
 				INFOPLIST_FILE = WorkoutBuddyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "OGM.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorkoutBuddy.app/WorkoutBuddy";
 			};

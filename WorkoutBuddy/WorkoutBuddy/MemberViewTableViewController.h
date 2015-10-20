@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface MemberViewTableViewController : UITableViewController
+@property (nonatomic) NSMutableArray *displayedMemberArray;
+
+
+-(void)fetchMemberData;
 
 @end

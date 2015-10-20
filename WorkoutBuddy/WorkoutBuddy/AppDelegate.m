@@ -17,7 +17,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    MemberViewViewController *memberView = [[MemberViewViewController alloc]init];
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    self.window.rootViewController = memberView;
+    [self.window makeKeyAndVisible];
+    
+    
+    
     return YES;
 }
 

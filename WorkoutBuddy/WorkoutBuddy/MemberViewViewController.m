@@ -7,22 +7,42 @@
 //
 
 #import "MemberViewViewController.h"
-
 @interface MemberViewViewController ()
+
 
 @end
 
-@implementation MemberViewViewController
 
+@implementation MemberViewViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.memberViewTableVC = [[MemberViewTableViewController alloc]init];
+    [self addChildViewController:self.memberViewTableVC];
+    [self.memberViewTableVC didMoveToParentViewController:self];
+    
+    
+    //might get moved to the memberViewTableVCs viewDidLoad
+    [self.memberViewTableVC fetchMemberData];
+    
+    
+    
+    
+    
+    
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    
+}
+-(void)viewDidLayoutSubviews{
+    [self.memberViewTableVC.view setFrame:self.memberViewTableContainer.bounds];
+    [self.memberViewTableContainer addSubview:self.memberViewTableVC.view];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation

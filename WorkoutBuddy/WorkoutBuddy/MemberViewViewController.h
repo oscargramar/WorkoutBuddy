@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MemberViewTableViewController.h"
+
+
 
 @interface MemberViewViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UIView *memberViewTableContainer;
+@property (strong,nonatomic) MemberViewTableViewController *memberViewTableVC;
 @end
