@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface MemberViewTableViewController : UITableViewController<UITableViewDelegate,UITableViewDataSource>
+@interface MemberViewTableViewController : UITableViewController<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic) NSMutableArray *displayedMemberArray;
 
 

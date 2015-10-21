@@ -17,10 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.displayedMemberArray = [[NSMutableArray alloc]init];
+
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+   
     [self fetchMemberData];
-    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,21 +63,17 @@
             NSLog(@"Successfully retrieved the object.");
             PFFile *userPic = object[@"AvatarFile"];
             [userPic getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
-                dispatch_async(dispatch_get_main_queue(), ^(void){
-                    [self.displayedMemberArray addObject:data];
+                                
+                if(!error){
                     
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self.displayedMemberArray addObject:data];
+                        [self.tableView reloadData];
+
+                    });
                     
-                     UIImage *test = [UIImage imageWithData:[self.displayedMemberArray objectAtIndex:0]];
-                    UIImageView *iv = [[UIImageView alloc]initWithImage:test];
-                    [iv setFrame:CGRectMake(50, 50, 100, 100)];
-                    [self.view addSubview:iv];
-                    
-                    
-                    
-                    [self.tableView reloadData];
-                    
-                    NSLog(@"here");
-                });
+                }
+                
                 
 
             }];
@@ -84,7 +82,6 @@
     }];
     
 }
-
 
 
 
@@ -107,21 +104,18 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     static NSString *cellIdentifier = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if(cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        
-        if([self.displayedMemberArray count] !=0 ){
-             cell.imageView.image = [UIImage imageWithData:([self.displayedMemberArray objectAtIndex:0])];
-            NSLog(@"data reloaded ");
         }
-       
-        
+    
+    if([self.displayedMemberArray count] !=0 ){
+        cell.imageView.image = [UIImage imageWithData:([self.displayedMemberArray objectAtIndex:0])];
     }
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
     
     return cell;
 }
