@@ -18,13 +18,7 @@
     [super viewDidLoad];
     self.memberViewTableVC = [[MemberViewTableViewController alloc]init];
     [self addChildViewController:self.memberViewTableVC];
-    [self.memberViewTableVC didMoveToParentViewController:self];
-    
-    
-    //might get moved to the memberViewTableVCs viewDidLoad
-    [self.memberViewTableVC fetchMemberData];
-    
-    
+    [self.memberViewTableVC didMoveToParentViewController:self];    
     
     
     

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 #import "MemberViewViewController.h"
 
 @interface AppDelegate ()
@@ -18,10 +19,28 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    
+    // [Optional] Power your app with Local Datastore. For more info, go to
+    // https://parse.com/docs/ios_guide#localdatastore/iOS
+    [Parse enableLocalDatastore];
+    
+    // Initialize Parse.
+    [Parse setApplicationId:@"b0ZPnkP9iwc3dsIptMTNnYPOuF2nwNrAwXyXIUpg"
+                  clientKey:@"yeWQ766kaq9xtT5f98GZVefHJ2vPXTmdxA1AVqtC"];
+    
+    // [Optional] Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    
     MemberViewViewController *memberView = [[MemberViewViewController alloc]init];
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     self.window.rootViewController = memberView;
     [self.window makeKeyAndVisible];
+    
+    
+  
+    
+    
     
     
     

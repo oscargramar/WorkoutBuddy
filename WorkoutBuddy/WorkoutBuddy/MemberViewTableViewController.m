@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.displayedMemberArray = [[NSMutableArray alloc]init];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    [self fetchMemberData];
     
 }
 
@@ -34,10 +37,51 @@
 
 
 -(void)fetchMemberData{
-    NSData *data = [@"Working at Parse is great!" dataUsingEncoding:NSUTF8StringEncoding];
-    PFFile *file = [PFFile fileWithName:@"resume.txt" data:data];
+//    UIImage *image = [UIImage imageNamed:@"husky.jpg"];
+//    NSData *imageData = UIImageJPEGRepresentation(image,0.5f);
+//    PFFile *file = [PFFile fileWithName:@"profilePic" data:imageData];
+//
+//    
+//    
+//    
+//    PFObject *userPhoto = [PFObject objectWithClassName:@"MemberData"];
+//    userPhoto[@"Summary"] = @"I'm trying to bulk";
+//    userPhoto[@"AvatarFile"] = file;
+//    userPhoto[@"RoutineDescription"] = @"I lift 5 times a week";
+//    userPhoto[@"LookingForDescription"] = @"A gym buddy";
+//    [userPhoto saveInBackground];
     
     
+    PFQuery *query = [PFQuery queryWithClassName:@"MemberData"];
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        if (!object) {
+            NSLog(@"The getFirstObject request failed.");
+        } else {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved the object.");
+            PFFile *userPic = object[@"AvatarFile"];
+            [userPic getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
+                dispatch_async(dispatch_get_main_queue(), ^(void){
+                    [self.displayedMemberArray addObject:data];
+                    
+                    
+                     UIImage *test = [UIImage imageWithData:[self.displayedMemberArray objectAtIndex:0]];
+                    UIImageView *iv = [[UIImageView alloc]initWithImage:test];
+                    [iv setFrame:CGRectMake(50, 50, 100, 100)];
+                    [self.view addSubview:iv];
+                    
+                    
+                    
+                    [self.tableView reloadData];
+                    
+                    NSLog(@"here");
+                });
+                
+
+            }];
+            
+        }
+    }];
     
 }
 
@@ -70,6 +114,12 @@
     if(cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        
+        if([self.displayedMemberArray count] !=0 ){
+             cell.imageView.image = [UIImage imageWithData:([self.displayedMemberArray objectAtIndex:0])];
+            NSLog(@"data reloaded ");
+        }
+       
         
     }
     
