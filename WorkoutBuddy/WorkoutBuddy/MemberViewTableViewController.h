@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
+#import "Member.h"
 
-@interface MemberViewTableViewController : UITableViewController<UITableViewDataSource,UITableViewDelegate>
+@interface MemberViewTableViewController : PFQueryTableViewController
 @property (nonatomic) NSMutableArray *displayedMemberArray;
 
 
--(void)fetchMemberData;
 
 @end

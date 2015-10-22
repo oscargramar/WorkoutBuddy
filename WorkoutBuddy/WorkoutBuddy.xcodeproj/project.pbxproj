@@ -17,6 +17,7 @@
 		55907DD51B81861E00DA4DA4 /* MemberViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55907DD31B81861E00DA4DA4 /* MemberViewViewController.m */; };
 		55907DD61B81861E00DA4DA4 /* MemberViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55907DD41B81861E00DA4DA4 /* MemberViewViewController.xib */; };
 		5599A7EA1BD6D74C00056D04 /* husky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5599A7E91BD6D74C00056D04 /* husky.jpg */; settings = {ASSET_TAGS = (); }; };
+		55EFC5C01BD86247006FFBB7 /* Member.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EFC5BF1BD86247006FFBB7 /* Member.m */; settings = {ASSET_TAGS = (); }; };
 		B0BAA9213572B3921EDD1F46 /* libPods-WorkoutBuddy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B72147480B6495638F6C7C6C /* libPods-WorkoutBuddy.a */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,8 @@
 		55907DD31B81861E00DA4DA4 /* MemberViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberViewViewController.m; sourceTree = "<group>"; };
 		55907DD41B81861E00DA4DA4 /* MemberViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemberViewViewController.xib; sourceTree = "<group>"; };
 		5599A7E91BD6D74C00056D04 /* husky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = husky.jpg; sourceTree = "<group>"; };
+		55EFC5BE1BD86247006FFBB7 /* Member.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Member.h; sourceTree = "<group>"; };
+		55EFC5BF1BD86247006FFBB7 /* Member.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Member.m; sourceTree = "<group>"; };
 		B72147480B6495638F6C7C6C /* libPods-WorkoutBuddy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WorkoutBuddy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -149,6 +152,7 @@
 		55907DAB1B817B9500DA4DA4 /* WorkoutBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				55EFC5BD1BD86216006FFBB7 /* Member */,
 				5599A7E91BD6D74C00056D04 /* husky.jpg */,
 				5562B05A1B819C4B00E3883A /* AppDelegate */,
 				5562B0631B85127F00E3883A /* DetailsView */,
@@ -184,6 +188,15 @@
 				55907DC71B817B9500DA4DA4 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55EFC5BD1BD86216006FFBB7 /* Member */ = {
+			isa = PBXGroup;
+			children = (
+				55EFC5BE1BD86247006FFBB7 /* Member.h */,
+				55EFC5BF1BD86247006FFBB7 /* Member.m */,
+			);
+			name = Member;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +356,7 @@
 				55907DB21B817B9500DA4DA4 /* AppDelegate.m in Sources */,
 				55907DD51B81861E00DA4DA4 /* MemberViewViewController.m in Sources */,
 				55907DAF1B817B9500DA4DA4 /* main.m in Sources */,
+				55EFC5C01BD86247006FFBB7 /* Member.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

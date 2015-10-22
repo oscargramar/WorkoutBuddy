@@ -4,6 +4,7 @@
 target 'WorkoutBuddy' do
 pod 'MMDrawerController','~>0.5.7'
 pod 'Parse'
+pod 'ParseUI'
 end
 
 target 'WorkoutBuddyTests' do

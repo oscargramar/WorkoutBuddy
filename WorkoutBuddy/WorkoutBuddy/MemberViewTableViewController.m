@@ -16,14 +16,42 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.displayedMemberArray = [[NSMutableArray alloc]init];
+    //self.displayedMemberArray = [[NSMutableArray alloc]init];
 
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
+    //self.tableView.delegate = self;
+    //self.tableView.dataSource = self;
    
-    [self fetchMemberData];
+   //[self fetchMemberData];
 
 }
+
+- (id)initWithStyle:(UITableViewStyle)style {
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom the table
+        
+        // The className to query on
+        self.parseClassName= @"MemberData";
+        
+        // The key of the PFObject to display in the label of the default cell style
+        self.textKey = @"Summary";
+        
+        // Uncomment the following line to specify the key of a PFFile on the PFObject to display in the imageView of the default cell style
+        // self.imageKey = @"image";
+        
+        // Whether the built-in pull-to-refresh is enabled
+        self.pullToRefreshEnabled = YES;
+        
+        // Whether the built-in pagination is enabled
+        self.paginationEnabled = YES;
+        
+        // The number of objects to show per page
+        self.objectsPerPage = 25;
+    }
+    return self;
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -31,154 +59,131 @@
 }
 
 
+#pragma mark - PFQueryTableViewController
 
-#pragma mark - Fetching member data
-
-
-
-
-
--(void)fetchMemberData{
-//    UIImage *image = [UIImage imageNamed:@"husky.jpg"];
-//    NSData *imageData = UIImageJPEGRepresentation(image,0.5f);
-//    PFFile *file = [PFFile fileWithName:@"profilePic" data:imageData];
-//
-//    
-//    
-//    
-//    PFObject *userPhoto = [PFObject objectWithClassName:@"MemberData"];
-//    userPhoto[@"Summary"] = @"I'm trying to bulk";
-//    userPhoto[@"AvatarFile"] = file;
-//    userPhoto[@"RoutineDescription"] = @"I lift 5 times a week";
-//    userPhoto[@"LookingForDescription"] = @"A gym buddy";
-//    [userPhoto saveInBackground];
+- (void)objectsWillLoad {
+    [super objectsWillLoad];
     
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"MemberData"];
-    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-        if (!object) {
-            NSLog(@"The getFirstObject request failed.");
-        } else {
-            // The find succeeded.
-            NSLog(@"Successfully retrieved the object.");
-            PFFile *userPic = object[@"AvatarFile"];
-            [userPic getDataInBackgroundWithBlock:^(NSData * _Nullable data, NSError * _Nullable error) {
-                                
-                if(!error){
-                    
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [self.displayedMemberArray addObject:data];
-                        [self.tableView reloadData];
+    // This method is called before a PFQuery is fired to get more objects
+}
 
-                    });
-                    
-                }
-                
-                
-
-            }];
-            
-        }
-    }];
+- (void)objectsDidLoad:(NSError *)error {
+    [super objectsDidLoad:error];
     
+    // This method is called every time objects are loaded from Parse via the PFQuery
+}
+
+
+ // Override to customize what kind of query to perform on the class. The default is to query for
+ // all objects ordered by createdAt descending.
+ - (PFQuery *)queryForTable {
+     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
+ 
+     // If Pull To Refresh is enabled, query against the network by default.
+     
+     
+     //NOTE: CHECK CACHE POLICY
+     if (self.pullToRefreshEnabled) {
+         //query.cachePolicy = kPFCachePolicyNetworkOnly;
+     }
+     // If no objects are loaded in memory, we look to the cache first to fill the table
+     // and then subsequently do a query against the network.
+     if (self.objects.count == 0) {
+         //query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+     }
+ 
+     [query orderByDescending:@"createdAt"];
+ 
+     return query;
 }
 
 
 
-
-
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // Return the number of rows in the section.
-    return 10;
-}
-
-
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellIdentifier = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    if(cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-        }
-    
-    if([self.displayedMemberArray count] !=0 ){
-        cell.imageView.image = [UIImage imageWithData:([self.displayedMemberArray objectAtIndex:0])];
-    }
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-
-    
-    return cell;
-}
+ // Override to customize the look of a cell representing an object. The default is to display
+ // a UITableViewCellStyleDefault style cell with the label being the textKey in the object,
+ // and the imageView being the imageKey in the object.
+ - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
+     static NSString *CellIdentifier = @"Cell";
+ 
+     PFTableViewCell *cell = (PFTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+     if (cell == nil) {
+         cell = [[PFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+     }
+ 
+     // Configure the cell
+     cell.textLabel.text = [object objectForKey:self.textKey];
+     //cell.imageView.file = [object objectForKey:self.imageKey];
+     PFFile *profilePicture = [object objectForKey:@"AvatarFile"];
+     cell.imageView.file = profilePicture;
+     return cell;
+ }
 
 
 /*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+ // Override if you need to change the ordering of objects in the table.
+ - (PFObject *)objectAtIndex:(NSIndexPath *)indexPath {
+ return [self.objects objectAtIndex:indexPath.row];
+ }
+ */
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to customize the look of the cell that allows the user to load the next page of objects.
+ // The default implementation is a UITableViewCellStyleDefault cell with simple labels.
+ - (UITableViewCell *)tableView:(UITableView *)tableView cellForNextPageAtIndexPath:(NSIndexPath *)indexPath {
+ static NSString *CellIdentifier = @"NextPage";
+ 
+ UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+ 
+ if (cell == nil) {
+ cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+ }
+ 
+ cell.selectionStyle = UITableViewCellSelectionStyleNone;
+ cell.textLabel.text = @"Load more...";
+ 
+ return cell;
+ }
+ */
+
+#pragma mark - UITableViewDataSource
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the object from Parse and reload the table view
+ } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, and save it to Parse
+ }
+ }
+ */
 
 /*
-#pragma mark - Table view delegate
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+ }
+ */
 
-// In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
+/*
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
+
+#pragma mark - UITableViewDelegate
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
-    
-    // Pass the selected object to the new view controller.
-    
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    [super tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
